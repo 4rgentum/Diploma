@@ -1,0 +1,87 @@
+% =====================================================================
+%  ОТЧеТ О НАУЧНО-ИССЛЕДОВАТЕЛЬСКОЙ РАБОТЕ
+%
+%  Тема:  Методика обнаружения несанкционированных действий и аномальной
+%         активности в корпоративной сети с использованием нейронных
+%         сетей
+%
+%  Структура отчета оформлена по ГОСТ 7.32-2017.
+%  Главы отчета соответствуют четырем этапам, заявленным в постановке
+%  задачи (см. файл ВКР).
+%
+%  Сборка: xelatex report.tex -> biber report -> xelatex (x2)
+%
+%  Папка отчета самодостаточна: все ресурсы (преамбула, библиография,
+%  графики) лежат внутри директории Report/.
+% =====================================================================
+\documentclass[14pt, a4paper, oneside]{extarticle}
+
+\input{preamble.tex}
+
+\addbibresource{bib/refs.bib}
+\graphicspath{{figures/}}
+
+\hypersetup{
+    pdftitle={Отчет о НИР: Методика обнаружения несанкционированных действий
+              и аномальной активности в корпоративной сети с использованием
+              нейронных сетей},
+    pdfauthor={Титов Д.И.},
+    pdfsubject={NIDS, CNN-LSTM, UNSW-NB15, ИИ-злоумышленник},
+    pdfkeywords={NIDS, CNN-LSTM, UNSW-NB15, CICIDS2017, drift, PSI, MMD,
+                 ИИ-злоумышленник, FSM, SOC, FastAPI, Streamlit}
+}
+
+\begin{document}
+
+% Титульный лист
+\input{1_title.tex}
+
+\newpage
+% Реферат
+\input{2_abstract.tex}
+
+\newpage
+% Содержание (заголовок --- структурный элемент по ГОСТ)
+\renewcommand{\contentsname}{\hfill\bfseries СОДЕРЖАНИЕ\hfill\mbox{}}
+\tableofcontents
+
+\newpage
+% Термины и определения
+\input{3_terms.tex}
+
+\newpage
+% Перечень сокращений
+\input{4_abbreviations.tex}
+
+\newpage
+% Введение
+\input{5_intro.tex}
+
+\newpage
+% Основная часть --- по этапам ВКР
+\input{6_chapter1_theory.tex}
+
+\newpage
+\input{7_chapter2_design.tex}
+
+\newpage
+\input{8_chapter3_implementation.tex}
+
+\newpage
+\input{9_chapter4_experiments.tex}
+
+\newpage
+% Заключение
+\input{10_conclusion.tex}
+
+\newpage
+% Список использованных источников
+\input{11_bibliography.tex}
+
+\newpage
+% Приложения
+\input{12_appendix.tex}
+
+% \label{LastPage} автоматически устанавливается пакетом lastpage
+
+\end{document}

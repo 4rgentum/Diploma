@@ -1,0 +1,213 @@
+% =====================================================================
+%  Приложения
+%  Оформление по ГОСТ 7.32-2017, п. 6.17:
+%   - каждое приложение --- с новой страницы;
+%   - в центре верхней части --- слово ПРИЛОЖЕНИЕ и буква;
+%   - под ним в скобках статус (обязательное/справочное);
+%   - на отдельной строке по центру --- заголовок без точки в конце;
+%   - таблицы и рисунки нумеруются с буквой приложения: А.1, А.2, ...
+% =====================================================================
+\appendix
+
+% По ГОСТ 7.32-2017 (п. 6.17.6) таблицы и рисунки приложений
+% нумеруются с буквой приложения и порядковым номером в пределах
+% каждого приложения.
+\renewcommand{\thetable}{А.\arabic{table}}
+\renewcommand{\thefigure}{А.\arabic{figure}}
+\setcounter{table}{0}
+\setcounter{figure}{0}
+
+% =====================================================================
+% Заголовок-обложка раздела приложений (для оглавления)
+% =====================================================================
+\phantomsection
+\addcontentsline{toc}{section}{ПРИЛОЖЕНИЯ}
+
+% =====================================================================
+\newpage
+\begin{center}
+ПРИЛОЖЕНИЕ А\\
+(справочное)
+
+\medskip
+
+Полная таблица результатов эксперимента E1
+\end{center}
+\addcontentsline{toc}{subsection}{Приложение А (справочное). Полная
+таблица результатов эксперимента E1}
+\label{app:E1-raw}
+
+\vspace{6pt}
+
+В таблице~\ref{tab:appE1} приведена полная сводка результатов
+эксперимента E1 на UNSW-NB15 для всех 15 моделей-кандидатов
+(23 запуска: для CNN-LSTM, XGBoost, Random Forest, Logistic
+Regression --- по три seed, для остальных моделей --- один seed).
+Для каждой модели зафиксированы: число seed, F1-max,
+$95\,\%$ bootstrap-CI для F1-max, PR-AUC, ROC-AUC, MCC,
+операционные F1 и FPR на пороге под target-FPR$\,=\,0{,}01$
+на валидации, inference latency на одно окно.
+
+{
+\setlength{\tabcolsep}{3pt}
+\footnotesize
+\begin{longtable}{|l|c|c|c|c|c|c|c|c|c|c|}
+\caption{Полная сводка результатов эксперимента E1 (15 моделей,
+23 запуска)}
+\label{tab:appE1}\\
+\hline
+Модель & s & F1max & CI low & CI hi & PR-AUC & ROC-AUC & MCC & Op.\,F1 & Op.\,FPR & Lat. \\
+\hline
+\endfirsthead
+\multicolumn{11}{@{}l@{}}{Продолжение таблицы~\ref{tab:appE1}}\\[2pt]
+\hline
+Модель & s & F1max & CI low & CI hi & PR-AUC & ROC-AUC & MCC & Op.\,F1 & Op.\,FPR & Lat. \\
+\hline
+\endhead
+\hline
+\endfoot
+cnn\_lstm           & 3 & 0,974 & 0,971 & 0,976 & 0,995 & 0,992 & 0,918 & 0,971 & 0,010 & 1,16  \\
+\hline
+xgboost             & 3 & 0,965 & 0,963 & 0,967 & 0,993 & 0,987 & 0,889 & 0,965 & 0,108 & 0,41  \\
+\hline
+\makecell[l]{random\_\\ forest}      & 3 & 0,962 & 0,960 & 0,965 & 0,992 & 0,985 & 0,879 & 0,960 & 0,105 & 42,7  \\
+\hline
+gru                 & 1 & 0,960 & 0,958 & 0,963 & 0,989 & 0,979 & 0,873 & 0,935 & 0,055 & 1,47  \\
+\hline
+mlp                 & 1 & 0,955 & 0,953 & 0,957 & 0,988 & 0,977 & 0,855 & 0,914 & 0,057 & 0,25  \\
+\hline
+transformer         & 1 & 0,954 & 0,952 & 0,957 & 0,983 & 0,968 & 0,852 & 0,874 & 0,057 & 0,88  \\
+\hline
+bilstm              & 1 & 0,952 & 0,949 & 0,954 & 0,987 & 0,975 & 0,848 & 0,885 & 0,043 & 0,78  \\
+\hline
+tcn                 & 1 & 0,951 & 0,948 & 0,953 & 0,982 & 0,971 & 0,844 & 0,852 & 0,035 & 1,70  \\
+\hline
+\makecell[l]{logistic\_\\ regression}& 3 & 0,951 & 0,948 & 0,954 & 0,973 & 0,952 & 0,846 & 0,948 & 0,084 & 0,18  \\
+\hline
+lstm                & 1 & 0,948 & 0,946 & 0,951 & 0,988 & 0,974 & 0,840 & 0,932 & 0,054 & 0,43  \\
+\hline
+cnn1d               & 1 & 0,936 & 0,933 & 0,939 & 0,976 & 0,957 & 0,797 & 0,879 & 0,044 & 0,45  \\
+\hline
+\makecell[l]{isolation\_\\ forest}   & 1 & 0,922 & 0,919 & 0,924 & 0,953 & 0,920 & 0,738 & 0,584 & 0,017 & 15,7  \\
+\hline
+ocsvm               & 1 & 0,866 & 0,862 & 0,871 & 0,892 & 0,831 & 0,549 & 0,609 & 0,097 & 2,20  \\
+\hline
+vae                 & 1 & 0,811 & 0,807 & 0,815 & 0,612 & 0,430 & 0,060 & 0,000 & 0,000 & 0,62  \\
+\hline
+autoencoder         & 1 & 0,811 & 0,806 & 0,815 & 0,614 & 0,437 & 0,053 & 0,000 & 0,000 & 0,69  \\
+\hline
+\end{longtable}
+}
+
+\noindent
+Обозначения: <<s>> --- число seed-ов; <<F1max>> --- F1 при
+оптимальном пороге на test; <<CI low / hi>> --- границы
+$95\,\%$ bootstrap-доверительного интервала для F1-max
+(200 ресэмплов); <<Op.\,F1>> и <<Op.\,FPR>> --- метрики на
+операционном пороге под target-FPR$\,=\,0{,}01$ на валидации;
+<<Lat.>> --- inference latency на одно окно, мс
+(CPU, batch~$=$~1, медианное значение по 50 прогонам после
+прогрева). Полная таблица результатов в формате CSV
+(\verb|E1_summary.csv|) поставляется в составе артефактов
+программного прототипа.
+
+% =====================================================================
+\newpage
+\renewcommand{\thetable}{Б.\arabic{table}}
+\renewcommand{\thefigure}{Б.\arabic{figure}}
+\setcounter{table}{0}
+\setcounter{figure}{0}
+
+\begin{center}
+ПРИЛОЖЕНИЕ Б\\
+(справочное)
+
+\medskip
+
+Структура программного прототипа и команды запуска
+\end{center}
+\addcontentsline{toc}{subsection}{Приложение Б (справочное). Структура
+программного прототипа и команды запуска}
+\label{app:project}
+
+\vspace{6pt}
+
+Прототип реализован как Python-пакет \texttt{diploma\_nids} с
+подпакетами \texttt{data, models, training, eval, attacker,
+inference, ui, utils}. Полное описание модулей и тестов приведено на
+этапе~\ref{ch:impl} настоящего отчета.
+
+\medskip
+
+Запуск экспериментов (из корневой директории программного
+прототипа):
+
+\begin{verbatim}
+make install-dev
+python scripts/02_build_dataset.py \
+    --config configs/data/unsw_nb15.yaml \
+    --preprocess configs/preprocess/default.yaml \
+    --strategy official
+python scripts/10_run_experiment_E1.py \
+    --train configs/train/full.yaml --seeds 42 123 2024
+python scripts/11_run_experiment_E2_error_analysis.py
+python scripts/12_run_experiment_E4_attacker.py
+python scripts/13_run_experiment_E5_drift.py
+python scripts/20_build_thesis_tables.py
+python scripts/22_parse_training_logs.py
+python scripts/21_plot_training_history.py
+python scripts/30_demo_run.py
+\end{verbatim}
+
+% =====================================================================
+\newpage
+\renewcommand{\thetable}{В.\arabic{table}}
+\renewcommand{\thefigure}{В.\arabic{figure}}
+\setcounter{table}{0}
+\setcounter{figure}{0}
+
+\begin{center}
+ПРИЛОЖЕНИЕ В\\
+(справочное)
+
+\medskip
+
+Конфигурации экспериментов
+\end{center}
+\addcontentsline{toc}{subsection}{Приложение В (справочное).
+Конфигурации экспериментов}
+\label{app:configs}
+
+\vspace{6pt}
+
+Все стадии pipeline параметризуются YAML-файлами в каталоге
+\verb|configs/| программного прототипа. Ключевые группы конфигов:
+
+\begin{itemize}
+    \item \verb|configs/data/| --- схемы UNSW-NB15 и CICIDS2017
+    (mapping общих признаков для cross-evaluation);
+    \item \verb|configs/preprocess/default.yaml| --- параметры
+    очистки, encoding, log/robust scaling, windowing, splits,
+    балансировки;
+    \item \verb|configs/models/| --- архитектуры 10 DL-моделей
+    (\verb|cnn_lstm.yaml| --- proposed) и параметры 5 классических
+    моделей (\verb|classical.yaml|);
+    \item \verb|configs/train/| --- параметры обучения
+    (\verb|full.yaml| для полного режима, \verb|smoke.yaml| для
+    smoke-тестов);
+    \item \verb|configs/eval/default.yaml| --- метрики, калибровка,
+    bootstrap CI, drift-monitoring;
+    \item \verb|configs/attacker/| --- политика FSM
+    (\verb|policy.yaml|), 7 шаблонов атак, drift-инжектор
+    (\verb|drift.yaml|);
+    \item \verb|configs/pipeline/realtime.yaml| --- конфигурация
+    realtime-стенда FastAPI + Streamlit + agent.
+\end{itemize}
+
+Каждый запуск экспериментов фиксирует: версию кода (commit hash),
+набор seed, гиперпараметры, версии зависимостей, полное содержимое
+использованных конфигов в виде attached-артефактов.
+
+% Метка последнего рисунка/таблицы для подсчета в реферате
+\label{lastfig}
+\label{lasttab}

@@ -1,0 +1,76 @@
+\xpg@aux {}{russian}
+\contentsline {section}{ТЕРМИНЫ И ОПРЕДЕЛЕНИЯ}{8}{section*.1}%
+\contentsline {section}{ПЕРЕЧЕНЬ СОКРАЩЕНИЙ И ОБОЗНАЧЕНИЙ}{10}{section*.2}%
+\contentsline {section}{ВВЕДЕНИЕ}{13}{section*.3}%
+\contentsline {section}{\numberline {1}ТЕОРЕТИЧЕСКИЙ АНАЛИЗ МЕТОДОВ ОБНАРУЖЕНИЯ АНОМАЛИЙ И ОБОСНОВАНИЕ ТРЕБОВАНИЙ К СИСТЕМЕ}{17}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Корпоративная сеть как объект мониторинга}{17}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Классификация и принципы построения IDS}{18}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Методы обнаружения аномалий}{18}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Сравнительный анализ нейросетевых архитектур}{19}{subsection.1.4}%
+\contentsline {subsubsection}{\numberline {1.4.1}Критерии сравнения}{19}{subsubsection.1.4.1}%
+\contentsline {subsubsection}{\numberline {1.4.2}Краткое описание архитектур}{19}{subsubsection.1.4.2}%
+\contentsline {subsubsection}{\numberline {1.4.3}Балльная оценка и выбор архитектуры}{21}{subsubsection.1.4.3}%
+\contentsline {subsection}{\numberline {1.5}Сравнительный анализ датасетов NIDS}{21}{subsection.1.5}%
+\contentsline {subsection}{\numberline {1.6}Систематизация подходов к активному тестированию NIDS}{22}{subsection.1.6}%
+\contentsline {subsection}{\numberline {1.7}Метрики качества}{23}{subsection.1.7}%
+\contentsline {subsection}{\numberline {1.8}Формализация требований и гипотеза}{24}{subsection.1.8}%
+\contentsline {section}{\numberline {2}ПРОЕКТИРОВАНИЕ МЕТОДИКИ ОБНАРУЖЕНИЯ И АРХИТЕКТУРЫ ПРОТОТИПА}{26}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Общая архитектура системы}{26}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Подсистема предобработки и формирование входных представлений}{26}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Схема признаков UNSW-NB15}{26}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Pipeline обработки}{27}{subsubsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.3}Управление дисбалансом классов}{28}{subsubsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.3}Архитектура нейросетевого детектора}{28}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Целевая архитектура CNN-LSTM}{28}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}Совокупность альтернативных моделей}{29}{subsubsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.3}Сценарий обучения}{29}{subsubsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.4}Калибровка вероятностей и порога принятия решения}{30}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Подсистема алертирования}{31}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Архитектура конечно-автоматного агента активного тестирования}{31}{subsection.2.6}%
+\contentsline {subsubsection}{\numberline {2.6.1}Состояния и политика}{31}{subsubsection.2.6.1}%
+\contentsline {subsubsection}{\numberline {2.6.2}Библиотека шаблонов атак}{31}{subsubsection.2.6.2}%
+\contentsline {subsubsection}{\numberline {2.6.3}Инжектор дрейфа распределений}{32}{subsubsection.2.6.3}%
+\contentsline {subsection}{\numberline {2.7}Подсистема мониторинга дрейфа}{33}{subsection.2.7}%
+\contentsline {subsection}{\numberline {2.8}Протокол экспериментального исследования}{33}{subsection.2.8}%
+\contentsline {section}{\numberline {3}ПРОГРАММНАЯ РЕАЛИЗАЦИЯ ПРОТОТИПА СИСТЕМЫ ОБНАРУЖЕНИЯ}{35}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Стек и общая структура программного проекта}{35}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Подсистема обработки данных}{36}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Реализованные модели}{37}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Подсистема обучения и оценки}{38}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Конечно-автоматный агент}{38}{subsection.3.5}%
+\contentsline {subsubsection}{\numberline {3.5.1}Шаблоны атак}{38}{subsubsection.3.5.1}%
+\contentsline {subsubsection}{\numberline {3.5.2}Конечно-автоматный планировщик}{39}{subsubsection.3.5.2}%
+\contentsline {subsubsection}{\numberline {3.5.3}Инжектор дрейфа и runtime}{39}{subsubsection.3.5.3}%
+\contentsline {subsection}{\numberline {3.6}Подсистема online-инференса и интерфейс}{40}{subsection.3.6}%
+\contentsline {subsubsection}{\numberline {3.6.1}FastAPI-сервис}{40}{subsubsection.3.6.1}%
+\contentsline {subsubsection}{\numberline {3.6.2}Формирование алертов}{40}{subsubsection.3.6.2}%
+\contentsline {subsubsection}{\numberline {3.6.3}Streamlit-дэшборд}{40}{subsubsection.3.6.3}%
+\contentsline {subsection}{\numberline {3.7}Воспроизводимость и журналирование}{40}{subsection.3.7}%
+\contentsline {subsection}{\numberline {3.8}Покрытие тестами}{41}{subsection.3.8}%
+\contentsline {subsection}{\numberline {3.9}Соответствие реализации функциональным требованиям}{41}{subsection.3.9}%
+\contentsline {section}{\numberline {4}ЭКСПЕРИМЕНТАЛЬНОЕ ИССЛЕДОВАНИЕ РАЗРАБОТАННОЙ МЕТОДИКИ И ПОДТВЕРЖДЕНИЕ ГИПОТЕЗЫ}{43}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Условия экспериментов}{43}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Параметры разделения и препроцессинга}{43}{subsubsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.2}Эксперимент E1: сравнение моделей-кандидатов}{44}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Цель и условия}{44}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2}Результаты}{44}{subsubsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.3}Анализ E1}{46}{subsubsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.3}Эксперимент E2: анализ ошибок CNN-LSTM}{47}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Эксперимент E3: калибровка вероятностей и порога}{49}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Эксперимент E4: стресс-тест с конечно-автоматным агентом}{49}{subsection.4.5}%
+\contentsline {subsubsection}{\numberline {4.5.1}Цель и условия}{49}{subsubsection.4.5.1}%
+\contentsline {subsubsection}{\numberline {4.5.2}Результаты}{50}{subsubsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.6}Эксперимент E5: устойчивость к контролируемому дрейфу}{52}{subsection.4.6}%
+\contentsline {subsubsection}{\numberline {4.6.1}Цель и условия}{52}{subsubsection.4.6.1}%
+\contentsline {subsubsection}{\numberline {4.6.2}Результаты}{52}{subsubsection.4.6.2}%
+\contentsline {subsection}{\numberline {4.7}Эксперимент E6: эксплуатационная производительность}{53}{subsection.4.7}%
+\contentsline {subsection}{\numberline {4.8}Cross-evaluation UNSW-NB15 на CICIDS2017}{54}{subsection.4.8}%
+\contentsline {subsection}{\numberline {4.9}Демонстрационный прогон}{55}{subsection.4.9}%
+\contentsline {subsection}{\numberline {4.10}Обоснование выбора CNN-LSTM по композитному критерию}{55}{subsection.4.10}%
+\contentsline {subsection}{\numberline {4.11}Подтверждение гипотезы исследования и соответствие требованиям}{57}{subsection.4.11}%
+\contentsline {section}{ЗАКЛЮЧЕНИЕ}{59}{section*.32}%
+\contentsline {section}{СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}{64}{section*.33}%
+\contentsline {section}{ПРИЛОЖЕНИЯ}{69}{section*.34}%
+\contentsline {subsection}{Приложение А (справочное). Полная таблица результатов эксперимента E1}{69}{section*.35}%
+\contentsline {subsection}{Приложение Б (справочное). Структура программного прототипа и команды запуска}{71}{table.Alph0.1}%
+\contentsline {subsection}{Приложение В (справочное). Конфигурации экспериментов}{72}{table.Alph0.1}%

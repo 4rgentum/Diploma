@@ -1,0 +1,285 @@
+% =====================================================================
+%  Преамбула отчета о НИР (ГОСТ 7.32-2017)
+%  Сборка: XeLaTeX + Biber
+%  Стиль библиографии: ГОСТ Р 7.0.100-2018 (biblatex-gost)
+% =====================================================================
+
+% Кодировка и шрифты
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\setsansfont{Arial}
+\setmonofont{Consolas}[Scale=0.92]
+\newfontfamily\cyrillicfonttt{Consolas}[Scale=0.92]
+
+\usepackage{polyglossia}
+\setdefaultlanguage{russian}
+\setotherlanguage{english}
+
+% Геометрия страницы (ГОСТ 7.32-2017, п. 6.1):
+% левое 30 мм, правое 15 мм, верхнее 20 мм, нижнее 20 мм
+\usepackage[a4paper, left=30mm, right=15mm, top=20mm, bottom=20mm,
+            footskip=10mm]{geometry}
+
+% Межстрочный интервал 1.5 (ГОСТ 7.32-2017, п. 6.1)
+\usepackage{setspace}
+\onehalfspacing
+
+% Абзацный отступ 1.25 см
+\usepackage{indentfirst}
+\setlength{\parindent}{1.25cm}
+
+% Математика
+\usepackage{amsmath, amssymb, amsthm, mathtools}
+
+% Графика, таблицы, списки
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{enumitem}
+
+% Перечисления по ГОСТ 7.32-2017, п. 6.4.6:
+%   itemize  --- маркер «тире» (—);
+%   enumerate --- «1)», «2)», ... с абзацного отступа.
+\setlist[itemize,1]{label=\textendash, leftmargin=1.25cm, labelsep=0.5em,
+                     itemsep=0pt, parsep=0pt, topsep=2pt}
+\setlist[itemize,2]{label=\textendash, leftmargin=2.5cm,  labelsep=0.5em,
+                     itemsep=0pt, parsep=0pt, topsep=2pt}
+\setlist[enumerate,1]{label=\arabic*), leftmargin=1.25cm, labelsep=0.5em,
+                     itemsep=0pt, parsep=0pt, topsep=2pt}
+\setlist[enumerate,2]{label=\arabic*), leftmargin=2.5cm,  labelsep=0.5em,
+                     itemsep=0pt, parsep=0pt, topsep=2pt}
+
+% Цвет, ссылки, листинги
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+    pdfencoding=auto,
+    bookmarksnumbered=true,
+    bookmarksopen=true,
+    colorlinks=false
+}
+\usepackage{listings}
+\lstset{
+    basicstyle=\ttfamily\footnotesize,
+    breaklines=true,
+    showstringspaces=false,
+    keywordstyle=\bfseries,
+    columns=fullflexible,
+    captionpos=b,
+    frame=single,
+    aboveskip=8pt,
+    belowskip=8pt
+}
+
+% Заголовки и оглавление
+\usepackage{titlesec}
+\usepackage{tocloft}
+
+% Библиография по ГОСТ Р 7.0.100-2018
+\usepackage[
+    backend=biber,
+    style=gost-numeric,
+    language=auto,
+    sorting=none,
+    maxbibnames=4,
+    minbibnames=1
+]{biblatex}
+
+% Дополнительные служебные пакеты
+\usepackage{csquotes}
+\usepackage{etoolbox}
+\usepackage{url}
+\usepackage[protrusion=true,expansion=false,
+            final,kerning=false,spacing=false,tracking=false]{microtype}
+\usepackage{xurl}
+\usepackage{seqsplit}
+\PassOptionsToPackage{hyphens}{url}
+\sloppy
+\emergencystretch=3em
+\hbadness=10000
+\vbadness=10000
+\hfuzz=2pt
+\vfuzz=2pt
+\hyphenpenalty=1000
+\tolerance=2000
+
+% Сброс счетчиков таблиц, рисунков и формул при начале новой секции
+\makeatletter
+\@addtoreset{table}{section}
+\@addtoreset{figure}{section}
+\@addtoreset{equation}{section}
+\makeatother
+
+% =====================================================================
+%  Отказ от курсива (ГОСТ 7.32-2017 строго ограничивает выделение)
+% =====================================================================
+% \emph и \textit преобразуются в обычный текст. \eng - то же самое.
+\let\origemph\emph
+\renewcommand{\emph}[1]{#1}
+\let\origtextit\textit
+\renewcommand{\textit}[1]{#1}
+
+% =====================================================================
+% Заголовки разделов и подразделов (ГОСТ 7.32-2017, п. 6.2.3):
+% с абзацного отступа, с прописной буквы, полужирным шрифтом,
+% не подчеркивая, без точки в конце.
+% =====================================================================
+\titleformat{\section}
+    {\normalfont\fontsize{14}{17}\bfseries\centering}
+    {\thesection}{1em}{}
+\titlespacing*{\section}{\parindent}{18pt}{12pt}
+
+\titleformat{\subsection}
+    {\normalfont\fontsize{14}{17}\bfseries}
+    {\thesubsection}{1em}{}
+\titlespacing*{\subsection}{\parindent}{14pt}{10pt}
+
+\titleformat{\subsubsection}
+    {\normalfont\fontsize{14}{17}\bfseries}
+    {\thesubsubsection}{1em}{}
+\titlespacing*{\subsubsection}{\parindent}{12pt}{8pt}
+
+% Нумерация рисунков, таблиц, формул --- в пределах раздела
+\renewcommand{\thefigure}{\arabic{section}.\arabic{figure}}
+\renewcommand{\thetable}{\arabic{section}.\arabic{table}}
+\renewcommand{\theequation}{\arabic{section}.\arabic{equation}}
+
+% =====================================================================
+% Подписи рисунков и таблиц (ГОСТ 7.32-2017, п. 6.5.7 и 6.6.3)
+% =====================================================================
+\DeclareCaptionLabelSeparator{gostdash}{~---~}
+
+% «Рисунок N --- Наименование» по центру под рисунком, без точки.
+\captionsetup[figure]{
+    labelsep=gostdash, name=Рисунок,
+    justification=centering, singlelinecheck=true,
+    font=normalsize, position=below
+}
+% «Таблица N --- Наименование» слева над таблицей, без абзацного отступа,
+% без точки в конце.
+\captionsetup[table]{
+    labelsep=gostdash, name=Таблица,
+    justification=raggedright, singlelinecheck=false,
+    font=normalsize, position=above, skip=4pt
+}
+\captionsetup[longtable]{
+    labelsep=gostdash, name=Таблица,
+    justification=raggedright, singlelinecheck=false,
+    font=normalsize, position=above, skip=4pt
+}
+
+% =====================================================================
+% Стиль таблиц (ГОСТ 7.32-2017, п. 6.6.6):
+% «Таблицы слева, справа, сверху и снизу ограничивают линиями».
+% Заменяем booktabs-команды \toprule/\midrule/\bottomrule на \hline,
+% вертикальные линии указываются в спецификации таблицы ( |...| ).
+% Заголовки граф выравниваются по центру (п. 6.6.6), данные --- по левому
+% краю или по центру в зависимости от содержимого.
+% =====================================================================
+\renewcommand{\toprule}{\hline}
+\renewcommand{\midrule}{\hline}
+\renewcommand{\bottomrule}{\hline}
+\renewcommand{\arraystretch}{1.15}
+\setlength{\tabcolsep}{6pt}
+
+% Колонки с переносом по словам: L --- по левому краю; C --- центр.
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\newcolumntype{Z}{>{\raggedright\arraybackslash}X}
+
+% Колонтитулы
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% =====================================================================
+% СОДЕРЖАНИЕ (ГОСТ 7.32-2017, п. 5.4, 6.13):
+% Каждую запись --- отдельным абзацем, выровненным влево; номера страниц
+% выровнены по правому краю, соединены отточием. Обозначения
+% подразделов --- с отступом, равным двум знакам относительно
+% обозначения разделов; пунктов --- четырем знакам.
+% =====================================================================
+\setcounter{tocdepth}{3}
+
+% Сам заголовок «СОДЕРЖАНИЕ» --- центрированный, полужирный, прописными
+\AtBeginDocument{%
+  \renewcommand{\contentsname}{\hfill\bfseries СОДЕРЖАНИЕ\hfill\mbox{}}%
+}
+
+% Шрифт записей в TOC --- нормальный (по ГОСТу не выделяется)
+\renewcommand{\cftsecfont}{\normalfont}
+\renewcommand{\cftsecpagefont}{\normalfont}
+\renewcommand{\cftsubsecfont}{\normalfont}
+\renewcommand{\cftsubsecpagefont}{\normalfont}
+\renewcommand{\cftsubsubsecfont}{\normalfont}
+\renewcommand{\cftsubsubsecpagefont}{\normalfont}
+
+% Отточия между текстом и номером страницы
+\renewcommand{\cftdotsep}{1.5}
+\renewcommand{\cftsecdotsep}{1.5}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftsecdotsep}}
+
+% Отступы: подраздел --- начинается с того же положения, что и текст
+% названия раздела (т.е. сдвинут на ширину номера раздела); пункт ---
+% сдвинут на ширину номера подраздела.
+\setlength{\cftsecindent}{0pt}
+\setlength{\cftsecnumwidth}{1.6em}
+\setlength{\cftsubsecindent}{1.6em}
+\setlength{\cftsubsecnumwidth}{2.4em}
+\setlength{\cftsubsubsecindent}{4.0em}
+\setlength{\cftsubsubsecnumwidth}{3.2em}
+
+% =====================================================================
+% Пользовательские команды
+% =====================================================================
+\newcommand{\figref}[1]{рисунок~\ref{#1}}
+\newcommand{\tabref}[1]{таблица~\ref{#1}}
+\newcommand{\secref}[1]{раздел~\ref{#1}}
+\newcommand{\eng}[1]{#1}
+
+% Структурный элемент отчета по ГОСТ 7.32-2017 (п. 6.2.1):
+% располагается в середине строки, без точки в конце, прописными буквами,
+% не подчеркивая. Каждый структурный элемент --- с новой страницы.
+\newcommand{\structelem}[1]{%
+  \phantomsection%
+  \addcontentsline{toc}{section}{#1}%
+  \begin{center}\bfseries #1\end{center}%
+  \vspace{6pt}%
+}
+
+% Структурный элемент БЕЗ записи в Содержание (для реферата,
+% поскольку п. 5.4.1 ГОСТ 7.32-2017 не относит реферат к
+% включаемым в содержание элементам).
+\newcommand{\structelemnotoc}[1]{%
+  \begin{center}\bfseries #1\end{center}%
+  \vspace{6pt}%
+}
+
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator{\softmax}{softmax}
+\DeclareMathOperator{\KL}{KL}
+\DeclareMathOperator{\MMD}{MMD}
+\DeclareMathOperator{\PSI}{PSI}
+
+% Метка последней страницы для реферата
+\usepackage{lastpage}
+
+% Заголовок списка источников --- структурный элемент.
+\defbibheading{structelem}[\bibname]{%
+  \phantomsection%
+  \addcontentsline{toc}{section}{#1}%
+  \begin{center}\bfseries #1\end{center}%
+  \vspace{6pt}%
+}
