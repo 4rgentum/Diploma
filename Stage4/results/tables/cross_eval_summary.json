@@ -1,0 +1,28 @@
+{
+  "common_features": [
+    "dur",
+    "spkts",
+    "dpkts",
+    "sbytes",
+    "dbytes",
+    "sload",
+    "dload",
+    "sinpkt",
+    "dinpkt",
+    "sjit",
+    "djit"
+  ],
+  "n_unsw_train_windows": 10288,
+  "n_unsw_test_windows": 21914,
+  "n_cicids_test_windows": 24997,
+  "unsw_f1_max": 0.9485,
+  "unsw_pr_auc": 0.9692,
+  "unsw_threshold": 0.4598,
+  "cicids_f1_max": 0.7945,
+  "cicids_pr_auc": 0.8312,
+  "cicids_threshold_optimal": 0.5128,
+  "cicids_f1_using_unsw_threshold": 0.7679,
+  "delta_f1_transfer": 0.1806,
+  "nfr7_threshold": 0.2,
+  "nfr7_met": true
+}

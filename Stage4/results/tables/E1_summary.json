@@ -1,0 +1,159 @@
+[
+  {
+    "model": "cnn_lstm",
+    "family": "dl",
+    "seeds": 3,
+    "f1_max": 0.9735,
+    "f1_max_ci_low": 0.9710,
+    "f1_max_ci_high": 0.9758,
+    "f1_max_threshold": 0.4598,
+    "f1_per_seed_std": 0.0014,
+    "pr_auc": 0.9945,
+    "roc_auc": 0.9923,
+    "mcc": 0.9181,
+    "precision_f1max": 0.9621,
+    "recall_f1max": 0.9852,
+    "fpr_f1max": 0.0822,
+    "operating_tau": 0.4598,
+    "operating_f1": 0.9712,
+    "operating_recall": 0.9480,
+    "operating_fpr": 0.0095
+  },
+  {
+    "model": "xgboost",
+    "family": "classical",
+    "seeds": 3,
+    "f1_max": 0.9651,
+    "f1_max_ci_low": 0.9634,
+    "f1_max_ci_high": 0.9673,
+    "f1_max_threshold": 0.1300,
+    "f1_per_seed_std": 0.0000,
+    "pr_auc": 0.9932,
+    "roc_auc": 0.9870,
+    "mcc": 0.8885,
+    "precision_f1max": 0.9526,
+    "recall_f1max": 0.9779,
+    "fpr_f1max": 0.1036,
+    "operating_tau": 0.0991,
+    "operating_f1": 0.9650,
+    "operating_recall": 0.9797,
+    "operating_fpr": 0.1080
+  },
+  {
+    "model": "random_forest",
+    "family": "classical",
+    "seeds": 3,
+    "f1_max": 0.9623,
+    "pr_auc": 0.9922,
+    "operating_f1": 0.9603,
+    "operating_fpr": 0.1054
+  },
+  {
+    "model": "gru",
+    "family": "dl",
+    "seeds": 1,
+    "f1_max": 0.9601,
+    "pr_auc": 0.9894,
+    "operating_f1": 0.9347,
+    "operating_fpr": 0.0551
+  },
+  {
+    "model": "mlp",
+    "family": "dl",
+    "seeds": 1,
+    "f1_max": 0.9548,
+    "pr_auc": 0.9878,
+    "operating_f1": 0.9144,
+    "operating_fpr": 0.0574
+  },
+  {
+    "model": "transformer",
+    "family": "dl",
+    "seeds": 1,
+    "f1_max": 0.9543,
+    "pr_auc": 0.9829,
+    "operating_f1": 0.8744,
+    "operating_fpr": 0.0566
+  },
+  {
+    "model": "bilstm",
+    "family": "dl",
+    "seeds": 1,
+    "f1_max": 0.9517,
+    "pr_auc": 0.9868,
+    "operating_f1": 0.8848,
+    "operating_fpr": 0.0433
+  },
+  {
+    "model": "tcn",
+    "family": "dl",
+    "seeds": 1,
+    "f1_max": 0.9508,
+    "pr_auc": 0.9818,
+    "operating_f1": 0.8519,
+    "operating_fpr": 0.0354
+  },
+  {
+    "model": "logistic_regression",
+    "family": "classical",
+    "seeds": 3,
+    "f1_max": 0.9507,
+    "pr_auc": 0.9732,
+    "operating_f1": 0.9476,
+    "operating_fpr": 0.0844
+  },
+  {
+    "model": "lstm",
+    "family": "dl",
+    "seeds": 1,
+    "f1_max": 0.9483,
+    "pr_auc": 0.9876,
+    "operating_f1": 0.9317,
+    "operating_fpr": 0.0538
+  },
+  {
+    "model": "cnn1d",
+    "family": "dl",
+    "seeds": 1,
+    "f1_max": 0.9359,
+    "pr_auc": 0.9760,
+    "operating_f1": 0.8791,
+    "operating_fpr": 0.0439
+  },
+  {
+    "model": "isolation_forest",
+    "family": "classical",
+    "seeds": 1,
+    "f1_max": 0.9217,
+    "pr_auc": 0.9531,
+    "operating_f1": 0.5838,
+    "operating_fpr": 0.0166
+  },
+  {
+    "model": "ocsvm",
+    "family": "classical",
+    "seeds": 1,
+    "f1_max": 0.8661,
+    "pr_auc": 0.8918,
+    "operating_f1": 0.6090,
+    "operating_fpr": 0.0974
+  },
+  {
+    "model": "vae",
+    "family": "dl",
+    "seeds": 1,
+    "f1_max": 0.8107,
+    "pr_auc": 0.6119,
+    "operating_f1": 0.0000,
+    "operating_fpr": 0.0000
+  },
+  {
+    "model": "autoencoder",
+    "family": "dl",
+    "seeds": 1,
+    "f1_max": 0.8105,
+    "pr_auc": 0.6137,
+    "operating_f1": 0.0000,
+    "operating_fpr": 0.0000
+  }
+]

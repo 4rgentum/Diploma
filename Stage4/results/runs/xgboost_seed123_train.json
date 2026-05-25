@@ -1,0 +1,9 @@
+{
+  "model": "xgboost",
+  "seed": 123,
+  "history": {
+    "fit_time_sec": 24.122551600041334,
+    "type": "classical"
+  },
+  "checkpoint": "D:\\Diplomba\\Stage3\\models\\xgboost_seed123.joblib"
+}

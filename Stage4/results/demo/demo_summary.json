@@ -1,0 +1,13 @@
+{
+  "n_alerts": 32,
+  "n_scored_windows": 34,
+  "n_ticks": 300,
+  "threshold": 0.4598,
+  "severity_breakdown": {
+    "info": 2,
+    "low": 4,
+    "medium": 9,
+    "high": 14,
+    "critical": 3
+  }
+}

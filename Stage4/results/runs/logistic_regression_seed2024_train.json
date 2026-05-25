@@ -1,0 +1,9 @@
+{
+  "model": "logistic_regression",
+  "seed": 2024,
+  "history": {
+    "fit_time_sec": 1.5736661999835633,
+    "type": "classical"
+  },
+  "checkpoint": "D:\\Diplomba\\Stage3\\models\\logistic_regression_seed2024.joblib"
+}

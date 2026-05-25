@@ -1,0 +1,2 @@
+common_features,n_unsw_train_windows,n_unsw_test_windows,n_cicids_test_windows,unsw_f1_max,unsw_pr_auc,unsw_threshold,cicids_f1_max,cicids_pr_auc,cicids_threshold_optimal,cicids_f1_using_unsw_threshold,delta_f1_transfer,nfr7_threshold,nfr7_met
+"['dur', 'spkts', 'dpkts', 'sbytes', 'dbytes', 'sload', 'dload', 'sinpkt', 'dinpkt', 'sjit', 'djit']",10288,21914,24997,0.9485,0.9692,0.4598,0.7945,0.8312,0.5128,0.7679,0.1806,0.2,True

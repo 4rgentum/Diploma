@@ -1,0 +1,9 @@
+{
+  "model": "random_forest",
+  "seed": 2024,
+  "history": {
+    "fit_time_sec": 3.0471292000147514,
+    "type": "classical"
+  },
+  "checkpoint": "D:\\Diplomba\\Stage3\\models\\random_forest_seed2024.joblib"
+}
