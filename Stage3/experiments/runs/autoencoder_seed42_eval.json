@@ -1,0 +1,116 @@
+{
+  "model": "autoencoder",
+  "checkpoint": "D:\\Diplomba\\Stage3\\models\\autoencoder_seed42.pt",
+  "threshold": 0.6113126265476404,
+  "temperature": 15.25234603881836,
+  "ece_before": 0.3262168504055831,
+  "ece_after": 0.06508039826812752,
+  "val": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "fpr": 0.0,
+    "mcc": 0.0,
+    "roc_auc": 0.5340836840481438,
+    "pr_auc": 0.5895083040369833,
+    "tp": 0.0,
+    "tn": 691.0,
+    "fp": 0.0,
+    "fn": 849.0
+  },
+  "test": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "fpr": 0.0,
+    "mcc": 0.0,
+    "roc_auc": 0.43687695159564377,
+    "pr_auc": 0.6136785454565035,
+    "tp": 0.0,
+    "tn": 7001.0,
+    "fp": 0.0,
+    "fn": 14913.0
+  },
+  "per_class_recall": [
+    {
+      "attack_cat": "Normal",
+      "support": 7001,
+      "recall_or_fpr": 0.0,
+      "type": "fpr",
+      "tp": NaN,
+      "fn": NaN
+    },
+    {
+      "attack_cat": "Analysis",
+      "support": 254,
+      "recall_or_fpr": 0.0,
+      "type": "recall",
+      "tp": 0.0,
+      "fn": 254.0
+    },
+    {
+      "attack_cat": "Backdoor",
+      "support": 239,
+      "recall_or_fpr": 0.0,
+      "type": "recall",
+      "tp": 0.0,
+      "fn": 239.0
+    },
+    {
+      "attack_cat": "DoS",
+      "support": 1548,
+      "recall_or_fpr": 0.0,
+      "type": "recall",
+      "tp": 0.0,
+      "fn": 1548.0
+    },
+    {
+      "attack_cat": "Exploits",
+      "support": 4088,
+      "recall_or_fpr": 0.0,
+      "type": "recall",
+      "tp": 0.0,
+      "fn": 4088.0
+    },
+    {
+      "attack_cat": "Fuzzers",
+      "support": 2344,
+      "recall_or_fpr": 0.0,
+      "type": "recall",
+      "tp": 0.0,
+      "fn": 2344.0
+    },
+    {
+      "attack_cat": "Generic",
+      "support": 4999,
+      "recall_or_fpr": 0.0,
+      "type": "recall",
+      "tp": 0.0,
+      "fn": 4999.0
+    },
+    {
+      "attack_cat": "Reconnaissance",
+      "support": 1286,
+      "recall_or_fpr": 0.0,
+      "type": "recall",
+      "tp": 0.0,
+      "fn": 1286.0
+    },
+    {
+      "attack_cat": "Shellcode",
+      "support": 136,
+      "recall_or_fpr": 0.0,
+      "type": "recall",
+      "tp": 0.0,
+      "fn": 136.0
+    },
+    {
+      "attack_cat": "Worms",
+      "support": 19,
+      "recall_or_fpr": 0.0,
+      "type": "recall",
+      "tp": 0.0,
+      "fn": 19.0
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+# CICIDS2017 — auxiliary dataset used for cross-evaluation (Stage 2 §8.10).
+# Data layout: one folder containing all per-day CSVs from CICFlowMeter.
+
+name: cicids2017
+data_dir: data/cicids2017
+pattern: "*.csv"
+rename_to_unsw: true
+
+# Common-feature subset (matches Stage 2 Table 6 column mapping); only these
+# 14 features are used for cross-evaluation between UNSW and CICIDS.
+common_features:
+  - dur
+  - proto_num
+  - service_port
+  - spkts
+  - dpkts
+  - sbytes
+  - dbytes
+  - sload
+  - dload
+  - sinpkt
+  - dinpkt
+  - sjit
+  - djit

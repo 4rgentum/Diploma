@@ -1,0 +1,13 @@
+# UNSW-NB15 data source
+# CSVs from https://research.unsw.edu.au/projects/unsw-nb15-dataset
+
+name: unsw_nb15
+data_dir: data/unsw_nb15
+train_csv: UNSW_NB15_training-set.csv
+test_csv:  UNSW_NB15_testing-set.csv
+
+# Hold-out validation carved from the training set (Stage 2 §8.1).
+val_fraction: 0.15
+val_seed: 42
+
+# Auxiliary cross-evaluation dataset path is given in cicids2017.yaml.

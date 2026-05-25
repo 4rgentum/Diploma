@@ -1,0 +1,7 @@
+name: ocsvm
+window: 32
+
+params:
+  kernel: rbf
+  gamma: scale
+  nu: 0.1

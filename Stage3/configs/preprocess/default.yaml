@@ -1,0 +1,15 @@
+# Preprocessor configuration (Stage 2 §2).
+
+clip_low_q:  0.001
+clip_high_q: 0.999
+
+categorical_onehot:
+  - proto
+  - state
+categorical_freq:
+  - service
+
+# Sliding window — used downstream by build_windows.
+window: 32
+stride: 8
+agg: last

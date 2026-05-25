@@ -1,0 +1,10 @@
+name: transformer
+window: 32
+
+params:
+  d_model: 64
+  n_heads: 4
+  ff_dim: 128
+  layers: 2
+  dropout: 0.1
+  head_hidden: 32

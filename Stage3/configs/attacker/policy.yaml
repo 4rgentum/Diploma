@@ -1,0 +1,74 @@
+# FSM policy — stochastic transitions + minimum dwell durations.
+# Row sums must equal 1.0 (validated by FSMAgent on construction).
+
+initial_state: NORMAL
+
+transitions:
+  NORMAL:
+    NORMAL: 0.75
+    ATTACK_DDOS: 0.04
+    ATTACK_SCAN: 0.06
+    ATTACK_BRUTE: 0.03
+    ATTACK_EXPLOIT: 0.03
+    ATTACK_EXFIL: 0.02
+    ATTACK_INTREC: 0.04
+    ATTACK_WORM: 0.01
+    DRIFT_COV: 0.01
+    DRIFT_PRIOR: 0.005
+    DRIFT_CONCEPT: 0.005
+  ATTACK_DDOS:
+    ATTACK_DDOS: 0.70
+    NORMAL: 0.30
+  ATTACK_SCAN:
+    ATTACK_SCAN: 0.70
+    NORMAL: 0.30
+  ATTACK_BRUTE:
+    ATTACK_BRUTE: 0.70
+    NORMAL: 0.30
+  ATTACK_EXPLOIT:
+    ATTACK_EXPLOIT: 0.65
+    NORMAL: 0.35
+  ATTACK_EXFIL:
+    ATTACK_EXFIL: 0.85
+    NORMAL: 0.15
+  ATTACK_INTREC:
+    ATTACK_INTREC: 0.70
+    NORMAL: 0.30
+  ATTACK_WORM:
+    ATTACK_WORM: 0.65
+    NORMAL: 0.35
+  DRIFT_COV:
+    DRIFT_COV: 0.85
+    NORMAL: 0.15
+  DRIFT_PRIOR:
+    DRIFT_PRIOR: 0.85
+    NORMAL: 0.15
+  DRIFT_CONCEPT:
+    DRIFT_CONCEPT: 0.85
+    NORMAL: 0.15
+
+min_durations:
+  NORMAL: 4
+  ATTACK_DDOS: 8
+  ATTACK_SCAN: 12
+  ATTACK_BRUTE: 6
+  ATTACK_EXPLOIT: 5
+  ATTACK_EXFIL: 10
+  ATTACK_INTREC: 6
+  ATTACK_WORM: 5
+  DRIFT_COV: 20
+  DRIFT_PRIOR: 20
+  DRIFT_CONCEPT: 20
+
+state_to_template:
+  NORMAL: normal
+  ATTACK_DDOS: ddos_synflood
+  ATTACK_SCAN: port_scan
+  ATTACK_BRUTE: brute_force
+  ATTACK_EXPLOIT: exploit_payload
+  ATTACK_EXFIL: data_exfil
+  ATTACK_INTREC: internal_recon
+  ATTACK_WORM: worm_lateral
+  DRIFT_COV: normal
+  DRIFT_PRIOR: normal
+  DRIFT_CONCEPT: normal

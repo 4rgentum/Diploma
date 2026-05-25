@@ -1,0 +1,13 @@
+# Target architecture (Stage 2 §3.2).
+name: cnn_lstm
+window: 32
+
+params:
+  cnn_channels: [64, 128]
+  kernel_size: 3
+  lstm_hidden: 96
+  lstm_layers: 1
+  bidirectional: true
+  head_hidden: 64
+  dropout: 0.25
+  use_attention_pool: true

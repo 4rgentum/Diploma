@@ -1,0 +1,7 @@
+name: autoencoder
+window: 32
+
+params:
+  hidden: [256, 128]
+  latent: 32
+  dropout: 0.0

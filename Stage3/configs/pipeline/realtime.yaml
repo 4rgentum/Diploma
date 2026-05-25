@@ -1,0 +1,19 @@
+# Realtime / demo pipeline (Stage 2 §8.8).
+
+agent:
+  policy: configs/attacker/policy.yaml
+  ticks: 300
+  seed: 42
+
+scorer:
+  window: 32
+  stride: 8
+
+alerting:
+  dedup_seconds: 2.0
+  history_size: 1024
+
+drift_monitor:
+  reference_path: data/processed/reference_window.npy
+  chunk_size: 300
+  psi_threshold: 0.25

@@ -1,0 +1,38 @@
+# Bundle of classical baselines — each is itself a top-level model
+# (see also: logistic_regression.yaml, random_forest.yaml, ...).
+# This file is consumed by 10_run_experiment_E1.py to enumerate baselines.
+
+models:
+  - name: logistic_regression
+    params:
+      C: 1.0
+      max_iter: 1000
+      solver: lbfgs
+      class_weight: balanced
+  - name: random_forest
+    params:
+      n_estimators: 200
+      n_jobs: -1
+      random_state: 42
+      class_weight: balanced
+  - name: xgboost
+    params:
+      n_estimators: 300
+      max_depth: 6
+      learning_rate: 0.1
+      subsample: 0.9
+      colsample_bytree: 0.9
+      n_jobs: -1
+      random_state: 42
+      tree_method: hist
+  - name: isolation_forest
+    params:
+      n_estimators: 200
+      contamination: 0.1
+      n_jobs: -1
+      random_state: 42
+  - name: ocsvm
+    params:
+      kernel: rbf
+      gamma: scale
+      nu: 0.1

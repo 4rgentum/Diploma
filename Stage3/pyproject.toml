@@ -1,0 +1,70 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "diploma-nids"
+version = "0.2.0"
+description = "Network intrusion detection methodology: deep learning detector + FSM-based attack agent + drift monitoring."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Titov D.I." }]
+keywords = ["NIDS", "intrusion-detection", "deep-learning", "CNN-LSTM", "drift", "FSM-agent"]
+
+dependencies = [
+    "numpy>=1.26",
+    "pandas>=2.2",
+    "scipy>=1.13",
+    "scikit-learn>=1.4",
+    "xgboost>=2.0",
+    "torch>=2.2",
+    "pydantic>=2.6",
+    "pyyaml>=6.0",
+    "rich>=13.7",
+    "typer>=0.12",
+    "matplotlib>=3.8",
+    "requests>=2.31",
+]
+
+[project.optional-dependencies]
+service = ["fastapi>=0.110", "uvicorn[standard]>=0.27", "httpx>=0.27"]
+ui      = ["streamlit>=1.32", "altair>=5.0"]
+dev     = [
+    "pytest>=8.0",
+    "pytest-xdist>=3.5",
+    "pytest-cov>=4.1",
+    "ruff>=0.4",
+    "mypy>=1.9",
+]
+
+[project.scripts]
+diploma-nids = "diploma_nids.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"diploma_nids" = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra -q --strict-markers"
+markers = [
+    "slow: tests that take more than a few seconds",
+    "needs_data: tests that require UNSW-NB15 CSV files on disk",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "N", "SIM"]
+ignore = ["E501", "B008"]
+
+[tool.mypy]
+python_version = "3.10"
+strict_optional = true
+warn_unused_ignores = true
+ignore_missing_imports = true

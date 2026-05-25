@@ -1,0 +1,21 @@
+# Common training schedule shared by every DL model (Stage 2 §3.4).
+
+epochs: 30
+batch_size: 256
+lr: 1.0e-3
+weight_decay: 1.0e-4
+grad_clip: 1.0
+optimizer: adamw
+scheduler: cosine
+scheduler_min_lr: 1.0e-6
+
+early_stopping_patience: 7
+early_stopping_metric: val_pr_auc
+early_stopping_mode:   max
+
+loss:
+  name:  focal
+  alpha: 0.25
+  gamma: 2.0
+
+num_workers: 0

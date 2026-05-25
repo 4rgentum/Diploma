@@ -1,0 +1,20 @@
+# Drift sweep configuration (Experiment E5).
+# Each entry produces one prog run. Intensities follow Stage 2 §6.5.
+
+drift_types:
+  - covariate
+  - concept
+
+intensities:
+  - 0.0
+  - 0.25
+  - 0.5
+  - 0.75
+  - 1.0
+
+# Number of attacker + normal records per (type, intensity) point.
+n_attack_samples: 3000
+n_normal_samples: 3000
+
+# Reference window for the drift monitor.
+reference_normal_samples: 5000

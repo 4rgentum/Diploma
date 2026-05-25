@@ -1,0 +1,19 @@
+# Fast smoke-config — used by Make `make smoke` and CI to verify the pipeline.
+
+epochs: 2
+batch_size: 128
+lr: 1.0e-3
+weight_decay: 1.0e-4
+grad_clip: 1.0
+optimizer: adamw
+scheduler: cosine
+scheduler_min_lr: 1.0e-5
+
+early_stopping_patience: 3
+early_stopping_metric: val_pr_auc
+early_stopping_mode:   max
+
+loss:
+  name:  focal
+  alpha: 0.25
+  gamma: 2.0

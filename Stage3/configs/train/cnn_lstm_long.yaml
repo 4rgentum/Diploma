@@ -1,0 +1,20 @@
+# Stronger training schedule used specifically for the proposed CNN-LSTM —
+# longer training + larger patience + a tiny bit more weight decay.
+
+epochs: 60
+batch_size: 256
+lr: 1.0e-3
+weight_decay: 2.0e-4
+grad_clip: 1.0
+optimizer: adamw
+scheduler: cosine
+scheduler_min_lr: 1.0e-6
+
+early_stopping_patience: 12
+early_stopping_metric: val_pr_auc
+early_stopping_mode:   max
+
+loss:
+  name:  focal
+  alpha: 0.25
+  gamma: 2.0

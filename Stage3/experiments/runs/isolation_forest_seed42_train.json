@@ -1,0 +1,9 @@
+{
+  "model": "isolation_forest",
+  "seed": 42,
+  "history": {
+    "fit_time_sec": 0.9140893999719992,
+    "type": "classical"
+  },
+  "checkpoint": "D:\\Diplomba\\Stage3\\models\\isolation_forest_seed42.joblib"
+}

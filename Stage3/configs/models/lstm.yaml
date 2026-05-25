@@ -1,0 +1,10 @@
+name: lstm
+window: 32
+
+params:
+  hidden: 96
+  layers: 1
+  bidirectional: false
+  head_hidden: 32
+  dropout: 0.2
+  use_attention_pool: false

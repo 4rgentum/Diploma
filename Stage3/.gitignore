@@ -1,0 +1,29 @@
+# Build / dist
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Caches
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Data and large artefacts
+data/unsw_nb15/*.csv
+data/cicids2017/
+data/processed/
+data/attacker_run.csv
+
+# Trained models
+models/*.pt
+models/*.joblib
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db

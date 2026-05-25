@@ -1,0 +1,116 @@
+{
+  "model": "lstm",
+  "checkpoint": "D:\\Diplomba\\Stage3\\models\\lstm_seed42.pt",
+  "threshold": 0.2669357128903626,
+  "temperature": 0.3777255117893219,
+  "ece_before": 0.48519426194297804,
+  "ece_after": 0.4547295056738685,
+  "val": {
+    "precision": 0.992797118847539,
+    "recall": 0.9740871613663133,
+    "f1": 0.9833531510107015,
+    "fpr": 0.008683068017366137,
+    "mcc": 0.963540107895861,
+    "roc_auc": 0.9984045246045828,
+    "pr_auc": 0.998743415619305,
+    "tp": 827.0,
+    "tn": 685.0,
+    "fp": 6.0,
+    "fn": 22.0
+  },
+  "test": {
+    "precision": 0.9725058343057176,
+    "recall": 0.8941862804264735,
+    "f1": 0.9317030567685589,
+    "fpr": 0.05384945007856021,
+    "mcc": 0.8096655502290143,
+    "roc_auc": 0.9736230360822571,
+    "pr_auc": 0.987588972715387,
+    "tp": 13335.0,
+    "tn": 6624.0,
+    "fp": 377.0,
+    "fn": 1578.0
+  },
+  "per_class_recall": [
+    {
+      "attack_cat": "Normal",
+      "support": 7001,
+      "recall_or_fpr": 0.05384945007856021,
+      "type": "fpr",
+      "tp": NaN,
+      "fn": NaN
+    },
+    {
+      "attack_cat": "Analysis",
+      "support": 254,
+      "recall_or_fpr": 0.905511811023622,
+      "type": "recall",
+      "tp": 230.0,
+      "fn": 24.0
+    },
+    {
+      "attack_cat": "Backdoor",
+      "support": 239,
+      "recall_or_fpr": 0.8577405857740585,
+      "type": "recall",
+      "tp": 205.0,
+      "fn": 34.0
+    },
+    {
+      "attack_cat": "DoS",
+      "support": 1548,
+      "recall_or_fpr": 0.8766149870801033,
+      "type": "recall",
+      "tp": 1357.0,
+      "fn": 191.0
+    },
+    {
+      "attack_cat": "Exploits",
+      "support": 4088,
+      "recall_or_fpr": 0.8659491193737769,
+      "type": "recall",
+      "tp": 3540.0,
+      "fn": 548.0
+    },
+    {
+      "attack_cat": "Fuzzers",
+      "support": 2344,
+      "recall_or_fpr": 0.7713310580204779,
+      "type": "recall",
+      "tp": 1808.0,
+      "fn": 536.0
+    },
+    {
+      "attack_cat": "Generic",
+      "support": 4999,
+      "recall_or_fpr": 1.0,
+      "type": "recall",
+      "tp": 4999.0,
+      "fn": 0.0
+    },
+    {
+      "attack_cat": "Reconnaissance",
+      "support": 1286,
+      "recall_or_fpr": 0.828149300155521,
+      "type": "recall",
+      "tp": 1065.0,
+      "fn": 221.0
+    },
+    {
+      "attack_cat": "Shellcode",
+      "support": 136,
+      "recall_or_fpr": 0.8455882352941176,
+      "type": "recall",
+      "tp": 115.0,
+      "fn": 21.0
+    },
+    {
+      "attack_cat": "Worms",
+      "support": 19,
+      "recall_or_fpr": 0.8421052631578947,
+      "type": "recall",
+      "tp": 16.0,
+      "fn": 3.0
+    }
+  ]
+}

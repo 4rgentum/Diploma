@@ -1,0 +1,11 @@
+attack_cat,support,recall_or_fpr,type,tp,fn
+Normal,6993,0.009437,fpr,,
+Analysis,254,0.8819,recall,224.0,30.0
+Backdoor,239,0.8786,recall,210.0,29.0
+DoS,1548,0.9400,recall,1455.0,93.0
+Exploits,4088,0.9598,recall,3924.0,164.0
+Fuzzers,2344,0.9002,recall,2110.0,234.0
+Generic,4999,1.0000,recall,4999.0,0.0
+Reconnaissance,1286,0.9207,recall,1184.0,102.0
+Shellcode,136,0.8824,recall,120.0,16.0
+Worms,19,0.8421,recall,16.0,3.0

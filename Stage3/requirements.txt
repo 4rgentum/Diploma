@@ -1,0 +1,25 @@
+numpy>=1.26
+pandas>=2.2
+scipy>=1.13
+scikit-learn>=1.4
+xgboost>=2.0
+torch>=2.2
+pydantic>=2.6
+pyyaml>=6.0
+rich>=13.7
+typer>=0.12
+matplotlib>=3.8
+requests>=2.31
+
+# REST service (optional)
+fastapi>=0.110
+uvicorn[standard]>=0.27
+httpx>=0.27
+
+# Streamlit dashboard (optional)
+streamlit>=1.32
+altair>=5.0
+
+# Dev / test
+pytest>=8.0
+pytest-xdist>=3.5

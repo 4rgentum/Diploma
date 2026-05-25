@@ -1,0 +1,9 @@
+{
+  "model": "ocsvm",
+  "seed": 42,
+  "history": {
+    "fit_time_sec": 7.4193248999654315,
+    "type": "classical"
+  },
+  "checkpoint": "D:\\Diplomba\\Stage3\\models\\ocsvm_seed42.joblib"
+}

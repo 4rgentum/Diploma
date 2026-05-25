@@ -1,0 +1,8 @@
+# Common evaluation knobs.
+
+target_fpr: 0.01           # NFR-2: false positive rate budget on val.
+ece_n_bins: 15             # 15-bin equal-width ECE (Guo et al. 2017).
+bootstrap_n: 200           # bootstrap CI samples for binary_metrics.
+bootstrap_ci: 0.95
+
+drift_psi_threshold: 0.25  # PSI > 0.25 -> alarm (Fiddler / Arize).

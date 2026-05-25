@@ -1,0 +1,8 @@
+name: tcn
+window: 32
+
+params:
+  channels: [64, 64, 64]
+  kernel_size: 3
+  dropout: 0.2
+  head_hidden: 32
