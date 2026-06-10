@@ -51,6 +51,7 @@
       \field{labeltitlesource}{title}
       \field{internalsortvolume}{2}
       \field{journaltitle}{Cybersecurity}
+      \field{media}{text}
       \field{title}{Survey of Intrusion Detection Systems: Techniques, Datasets and Challenges}
       \field{urlday}{13}
       \field{urlmonth}{5}
@@ -105,6 +106,7 @@
       \field{labeltitlesource}{title}
       \field{internalsortvolume}{32}
       \field{journaltitle}{Transactions on Emerging Telecommunications Technologies}
+      \field{media}{text}
       \field{title}{Network Intrusion Detection System: A Systematic Study of Machine Learning and Deep Learning Approaches}
       \field{urlday}{13}
       \field{urlmonth}{5}
@@ -150,6 +152,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{IEEE Symposium on Security and Privacy}
+      \field{media}{text}
       \field{title}{Outside the Closed World: On Using Machine Learning for Network Intrusion Detection}
       \field{urlday}{13}
       \field{urlmonth}{5}
@@ -197,6 +200,7 @@
       \field{labeltitlesource}{title}
       \field{internalsortvolume}{16}
       \field{journaltitle}{Journal of Artificial Intelligence Research}
+      \field{media}{text}
       \field{title}{{SMOTE}: Synthetic Minority Over-sampling Technique}
       \field{urlday}{13}
       \field{urlmonth}{5}
@@ -250,6 +254,7 @@
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labeltitlesource}{title}
       \field{booktitle}{IEEE International Conference on Computer Vision (ICCV)}
+      \field{media}{text}
       \field{title}{Focal Loss for Dense Object Detection}
       \field{urlday}{13}
       \field{urlmonth}{5}
@@ -302,6 +307,7 @@
       \field{labeltitlesource}{title}
       \field{internalsortvolume}{46}
       \field{journaltitle}{ACM Computing Surveys}
+      \field{media}{text}
       \field{title}{A Survey on Concept Drift Adaptation}
       \field{urlday}{13}
       \field{urlmonth}{5}
@@ -362,6 +368,7 @@
       \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labeltitlesource}{title}
       \field{booktitle}{14th ACM Workshop on Artificial Intelligence and Security (AISec)}
+      \field{media}{text}
       \field{title}{{INSOMNIA}: Towards Concept-Drift Robustness in Network Intrusion Detection}
       \field{urlday}{13}
       \field{urlmonth}{5}
@@ -407,6 +414,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Military Communications and Information Systems Conference (MilCIS)}
+      \field{media}{text}
       \field{title}{{UNSW-NB15}: A Comprehensive Data Set for Network Intrusion Detection Systems ({UNSW-NB15} Network Data Set)}
       \field{urlday}{13}
       \field{urlmonth}{5}
@@ -453,6 +461,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{4th International Conference on Information Systems Security and Privacy (ICISSP)}
+      \field{media}{text}
       \field{title}{Toward Generating a New Intrusion Detection Dataset and Intrusion Traffic Characterization}
       \field{urlday}{13}
       \field{urlmonth}{5}
@@ -500,6 +509,7 @@
       \field{labeltitlesource}{title}
       \field{internalsortvolume}{50}
       \field{journaltitle}{Journal of Information Security and Applications}
+      \field{media}{text}
       \field{title}{Deep Learning for Cyber Security Intrusion Detection: Approaches, Datasets, and Comparative Study}
       \field{urlday}{13}
       \field{urlmonth}{5}
@@ -540,6 +550,7 @@
       \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{media}{eresource}
       \field{title}{{Cisco Systems NetFlow Services Export Version 9}}
       \field{urlday}{13}
       \field{urlmonth}{5}
@@ -588,6 +599,7 @@
       \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{media}{eresource}
       \field{title}{{Specification of the IP Flow Information Export (IPFIX) Protocol for the Exchange of Flow Information}}
       \field{urlday}{13}
       \field{urlmonth}{5}
@@ -634,6 +646,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{IEEE International Conference on Data Mining (ICDM)}
+      \field{media}{text}
       \field{title}{Isolation Forest}
       \field{urlday}{13}
       \field{urlmonth}{5}
@@ -686,6 +699,7 @@
       \field{labeltitlesource}{title}
       \field{internalsortvolume}{13}
       \field{journaltitle}{Neural Computation}
+      \field{media}{text}
       \field{title}{Estimating the Support of a High-Dimensional Distribution}
       \field{urlday}{13}
       \field{urlmonth}{5}
@@ -747,6 +761,7 @@
       \field{labeltitlesource}{title}
       \field{internalsortvolume}{7}
       \field{journaltitle}{IEEE Access}
+      \field{media}{text}
       \field{title}{Deep Learning Approach for Intelligent Intrusion Detection System}
       \field{urlday}{13}
       \field{urlmonth}{5}
@@ -791,6 +806,7 @@
       \field{labeltitlesource}{title}
       \field{internalsortvolume}{9}
       \field{journaltitle}{Neural Computation}
+      \field{media}{text}
       \field{title}{Long Short-Term Memory}
       \field{urlday}{13}
       \field{urlmonth}{5}
@@ -839,6 +855,7 @@
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labeltitlesource}{title}
       \field{booktitle}{Conference on Empirical Methods in Natural Language Processing (EMNLP)}
+      \field{media}{text}
       \field{title}{Learning Phrase Representations using {RNN} Encoder--Decoder for Statistical Machine Translation}
       \field{urlday}{13}
       \field{urlmonth}{5}
@@ -886,10 +903,21 @@
       \field{labeltitlesource}{title}
       \field{eprintclass}{cs.LG}
       \field{eprinttype}{arXiv}
+      \field{media}{eresource}
       \field{title}{An Empirical Evaluation of Generic Convolutional and Recurrent Networks for Sequence Modeling}
+      \field{urlday}{13}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
       \field{year}{2018}
+      \field{urldateera}{ce}
       \verb{eprint}
       \verb 1803.01271
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1803.01271
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1803.01271
       \endverb
     \endentry
     \entry{vaswani2017attention}{inproceedings}{useauthor=false}{}
@@ -920,6 +948,7 @@
       \field{labeltitlesource}{title}
       \field{booktitle}{Advances in Neural Information Processing Systems (NeurIPS)}
       \field{internalsortvolume}{30}
+      \field{media}{text}
       \field{title}{Attention Is All You Need}
       \field{year}{2017}
       \field{volume}{30}
@@ -951,6 +980,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{International Conference on Learning Representations (ICLR)}
+      \field{media}{text}
       \field{title}{Auto-Encoding Variational {Bayes}}
       \field{year}{2014}
     \endentry
@@ -988,6 +1018,7 @@
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labeltitlesource}{title}
       \field{booktitle}{International Conference on Information Science and Security (ICISA)}
+      \field{media}{text}
       \field{title}{An Evaluation Framework for Intrusion Detection Dataset}
       \field{urlday}{13}
       \field{urlmonth}{5}
@@ -1031,6 +1062,7 @@
       \field{labeltitlesource}{title}
       \field{internalsortvolume}{34}
       \field{journaltitle}{Computer Networks}
+      \field{media}{text}
       \field{title}{The 1999 {DARPA} Off-line Intrusion Detection Evaluation}
       \field{urlday}{13}
       \field{urlmonth}{5}
@@ -1084,6 +1116,7 @@
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labeltitlesource}{title}
       \field{booktitle}{IEEE Symposium on Computational Intelligence for Security and Defense Applications (CISDA)}
+      \field{media}{text}
       \field{title}{A Detailed Analysis of the {KDD CUP 99} Data Set}
       \field{urlday}{13}
       \field{urlmonth}{5}
@@ -1121,6 +1154,7 @@
       \field{labeltitlesource}{title}
       \field{internalsortvolume}{72}
       \field{journaltitle}{Sustainable Cities and Society}
+      \field{media}{text}
       \field{title}{A New Distributed Architecture for Evaluating {AI}-based Security Systems at the Edge: Network {TON\_IoT} Datasets}
       \field{urlday}{13}
       \field{urlmonth}{5}
@@ -1170,6 +1204,7 @@
       \field{labeltitlesource}{title}
       \field{internalsortvolume}{100}
       \field{journaltitle}{Future Generation Computer Systems}
+      \field{media}{text}
       \field{title}{Towards the Development of Realistic Botnet Dataset in the Internet of Things for Network Forensic Analytics: {Bot-IoT} Dataset}
       \field{urlday}{13}
       \field{urlmonth}{5}
@@ -1228,6 +1263,7 @@
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labeltitlesource}{title}
       \field{booktitle}{1st Workshop on Building Analysis Datasets and Gathering Experience Returns for Security (BADGERS)}
+      \field{media}{text}
       \field{title}{Statistical Analysis of Honeypot Data and Building of Kyoto 2006+ Dataset for {NIDS} Evaluation}
       \field{urlday}{13}
       \field{urlmonth}{5}
@@ -1271,6 +1307,7 @@
       \field{labeltitlesource}{title}
       \field{internalsortvolume}{9}
       \field{journaltitle}{Electronics}
+      \field{media}{text}
       \field{title}{{LITNET-2020}: An Annotated Real-World Network Flow Dataset for Network Intrusion Detection}
       \field{urlday}{13}
       \field{urlmonth}{5}
@@ -1322,6 +1359,7 @@
       \field{labeltitlesource}{title}
       \field{internalsortvolume}{82}
       \field{journaltitle}{Computers \& Security}
+      \field{media}{text}
       \field{title}{Flow-based Network Traffic Generation Using Generative Adversarial Networks}
       \field{urlday}{13}
       \field{urlmonth}{5}
@@ -1371,6 +1409,7 @@
       \field{labeltitlesource}{title}
       \field{internalsortvolume}{17}
       \field{journaltitle}{Sensors}
+      \field{media}{text}
       \field{title}{Conditional Variational Autoencoder for Prediction and Feature Recovery Applied to Intrusion Detection in {IoT}}
       \field{urlday}{13}
       \field{urlmonth}{5}
@@ -1418,6 +1457,7 @@
       \field{labeltitlesource}{title}
       \field{booktitle}{Advances in Neural Information Processing Systems (NeurIPS)}
       \field{internalsortvolume}{27}
+      \field{media}{text}
       \field{title}{Generative Adversarial Nets}
       \field{year}{2014}
       \field{volume}{27}
@@ -1450,10 +1490,21 @@
       \field{labeltitlesource}{title}
       \field{eprintclass}{cs.LG}
       \field{eprinttype}{arXiv}
+      \field{media}{eresource}
       \field{title}{Conditional Generative Adversarial Nets}
+      \field{urlday}{13}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
       \field{year}{2014}
+      \field{urldateera}{ce}
       \verb{eprint}
       \verb 1411.1784
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1411.1784
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1411.1784
       \endverb
     \endentry
     \entry{arjovsky2017wgan}{inproceedings}{}{}
@@ -1487,6 +1538,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{International Conference on Machine Learning (ICML)}
+      \field{media}{text}
       \field{title}{Wasserstein Generative Adversarial Networks}
       \field{year}{2017}
       \field{pages}{214\bibrangedash 223}
@@ -1529,6 +1581,7 @@
       \field{labeltitlesource}{title}
       \field{booktitle}{Advances in Neural Information Processing Systems (NeurIPS)}
       \field{internalsortvolume}{30}
+      \field{media}{text}
       \field{title}{Improved Training of {Wasserstein GANs}}
       \field{year}{2017}
       \field{volume}{30}
@@ -1571,6 +1624,7 @@
       \field{labeltitlesource}{title}
       \field{internalsortvolume}{17}
       \field{journaltitle}{IEEE Transactions on Network and Service Management}
+      \field{media}{text}
       \field{title}{Deep Reinforcement Adversarial Learning Against Network Intrusion Detection in Continuous-Time}
       \field{urlday}{13}
       \field{urlmonth}{5}
@@ -1621,6 +1675,7 @@
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labeltitlesource}{title}
       \field{booktitle}{International Conference on Machine Learning (ICML)}
+      \field{media}{text}
       \field{title}{On Calibration of Modern Neural Networks}
       \field{year}{2017}
       \field{pages}{1321\bibrangedash 1330}
@@ -1654,6 +1709,7 @@
       \field{labeltitlesource}{title}
       \field{internalsortvolume}{25}
       \field{journaltitle}{Information Security Journal: A Global Perspective}
+      \field{media}{text}
       \field{title}{The Evaluation of Network Anomaly Detection Systems: Statistical Analysis of the {UNSW-NB15} Data Set and the Comparison with the {KDD99} Data Set}
       \field{urlday}{13}
       \field{urlmonth}{5}
@@ -1699,6 +1755,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{ACM SIGKDD International Conference on Knowledge Discovery and Data Mining}
+      \field{media}{text}
       \field{title}{{XGBoost}: A Scalable Tree Boosting System}
       \field{urlday}{13}
       \field{urlmonth}{5}

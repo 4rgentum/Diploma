@@ -1,4 +1,4 @@
-\section{ПРОГРАММНАЯ РЕАЛИЗАЦИЯ ПРОТОТИПА СИСТЕМЫ ОБНАРУЖЕНИЯ}
+\section{Программная реализация прототипа системы обнаружения}
 \label{ch:impl}
 
 \noindent
@@ -167,7 +167,7 @@ ocsvm                & classical (one-class)     & нет & classical.py \\
 \begin{equation*}
 \begin{aligned}
 \text{Input}(B, W, F)\ &\to\ [\text{Conv1D}\!\to\!\text{BN}\!\to\!\text{ReLU}\!\to\!\text{MaxPool}\!\to\!\text{Dropout}]\!\times\!2\\
-&\to\ \text{BiLSTM}\ \to\ \text{Attention\,Pool}\ \to\ \text{LayerNorm}\ \to\ \text{MLP-head}\ \to\ \text{Sigmoid}.
+&\to\ \text{BiLSTM}\ \to\ \text{Attention\,Pool}\ \to\ \text{LayerNorm}\ \to\ \text{MLP-head}\ \\ \to\ \text{Sigmoid}.
 \end{aligned}
 \end{equation*}
 Число параметров --- порядка 200 тыс., размер модели на диске ---
@@ -248,7 +248,7 @@ Worms \\
 \end{table}
 
 Реализация дуальная: эмпирический режим
-(\texttt{build\_templates\_from\_dataframe}) фитится на выборке
+(\texttt{build\_templates\_from\_} \\ \texttt{dataframe}) фитится на выборке
 UNSW-NB15-train и эмитит потоки по empirical-CDF числовых признаков
 с jitter; параметрический режим
 (\texttt{default\_template\_registry}) используется как fallback.
